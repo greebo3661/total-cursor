@@ -1,0 +1,24 @@
+---
+description: "Windows Server host automation - OpenSSH, firewall, service scripts"
+globs: ["**/*.ps1"]
+alwaysApply: false
+---
+# Windows Host Automation
+
+Guidance for PowerShell scripts that manage the Windows Server host (OpenSSH, firewall, services).
+
+## Conventions
+
+- Target PowerShell 7+ syntax where possible; note when a script requires Windows PowerShell 5.1.
+- Never hardcode credentials, tokens, or host passwords. Read from environment or a local
+  ignored file; commit only `*.example` templates.
+- Firewall changes: document the rule name, port, direction, and scope in the script header.
+- Service/sshd changes: validate with the existing test scripts (e.g. `run-sshd-test.ps1`)
+  before declaring success; prefer idempotent operations.
+- Prefer explicit `-ErrorAction Stop` + try/catch for operations that mutate host state.
+
+## Safety
+
+- Destructive host operations (service delete, key regeneration, ACL reset) require an
+  explicit confirmation step and a documented rollback.
+- Log what changed (service state, firewall rule, key path) so the action is auditable.

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "node \"{{USER_CURSOR_HOME}}/hooks/before-submit-prompt.js\"",
+        "event": "beforeSubmitPrompt",
+        "description": "Detect secrets in prompts (sk-, ghp_, AKIA, Slack, private keys); warns only"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": "node \"{{USER_CURSOR_HOME}}/hooks/before-read-file.js\"",
+        "event": "beforeReadFile",
+        "description": "Warn when reading sensitive files (.env, .key, .pem, credentials)"
+      }
+    ],
+    "beforeTabFileRead": [
+      {
+        "command": "node \"{{USER_CURSOR_HOME}}/hooks/before-tab-file-read.js\"",
+        "event": "beforeTabFileRead",
+        "description": "Block Tab from reading secrets (.env, .key, .pem, credentials); exit 2"
+      }
+    ]
+  }
+}

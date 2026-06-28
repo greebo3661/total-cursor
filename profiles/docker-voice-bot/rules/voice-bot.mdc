@@ -1,0 +1,24 @@
+---
+description: "Asterisk / WebRTC / voice-bot telephony conventions"
+globs: ["asterisk/**", "**/pjsip*.conf", "**/extensions*.conf", "**/rtp.conf"]
+alwaysApply: false
+---
+# Voice-bot / Asterisk Conventions
+
+Applies to Asterisk PBX, WebRTC, SIP, RTP, and coturn configuration.
+
+## Context
+
+- Full architecture and host topology: `VOICE-BOT-HANDOFF.md`, `CONTAINERS.md`.
+- WebRTC setup sequence and fixes: `asterisk/docs/asterisk-webrtc/` (numbered runbooks).
+
+## Rules
+
+- Treat the numbered runbooks in `asterisk/docs/asterisk-webrtc/` as the source of truth;
+  when changing config, update the matching runbook/checklist.
+- For WebRTC endpoint changes, verify against `asterisk/docs/asterisk-webrtc/08-checklist.md`
+  and the 488 / one-way-audio diagnostics before declaring done.
+- RTP/ICE/coturn changes must keep the Docker networking constraints in mind
+  (see `03-rtp-ice-docker.md`, `05-coturn.md`).
+- Never commit real SIP credentials; rotate immediately if leaked (see `17-rotate-*`).
+- After dialplan or pjsip edits, run `asterisk/scripts/test-voice-bot-asterisk.ps1`.
