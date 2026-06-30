@@ -16,6 +16,7 @@ projects. See each upstream repository for license terms.
 | SRE runbooks (3) | medzin/sre-runbook-agent-skills | https://github.com/medzin/sre-runbook-agent-skills | sre-runbook-author, -reviewer, -executor |
 | runbook-generator | borghei/Claude-Skills | https://github.com/borghei/Claude-Skills | engineering/runbook-generator |
 | generate-uat | custom | this repo | replacement for non-existent rushikeshpol02/ai-skills |
+| make-interfaces-feel-better | jakubkrehel/make-interfaces-feel-better | https://github.com/jakubkrehel/make-interfaces-feel-better | UI polish: typography, surfaces, animations, micro-interactions |
 | voice-bot profile | custom | d:\\docker project | AGENTS.md, voice-bot-stack skill, voice-bot.mdc rule |
 
 ## MCP servers (configured via example, not bundled)
