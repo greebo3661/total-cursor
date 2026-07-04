@@ -1,0 +1,50 @@
+---
+description: "Route tasks to the right skills and subagents before acting"
+alwaysApply: true
+---
+
+# Agent routing
+
+Before non-trivial work: read the matching skill (`SKILL.md`), then act. Delegate to a
+subagent via `Task` when the task is multi-file, review-gated, or domain-heavy.
+
+Full routing tables: `AGENTS.md` § Skills & subagents routing.
+
+## Mandatory triggers
+
+| Trigger | Action |
+|---------|--------|
+| Raw request / vague feature | Read `intake-to-spec` or run `speckit-specify` |
+| New feature / component | Read `brainstorming` first |
+| Before writing code | Read `test-driven-development`; read domain skill |
+| Before custom utility | Read `search-first` |
+| After code changes | Launch `code-reviewer` subagent |
+| Auth / user input / secrets / API | Read `security-review`; launch `security-reviewer` |
+| Asterisk / WebRTC / SIP / voice-bot | Read `voice-bot-stack` |
+| Webshop / product page / checkout | Read `frontend-ui-ux` |
+| UI polish / "feels off" | Read `make-interfaces-feel-better` |
+| Before deploy | Read `pre-deploy-checklist` |
+| Before accepting work | Read `review-and-verify` or launch `verifier` |
+
+## Subagent quick pick
+
+- `explore` — codebase search, unknown location
+- `planner` — implementation plan, large refactor
+- `architect` — system design, trade-offs
+- `code-reviewer` — post-change review (required)
+- `security-reviewer` — OWASP, secrets, auth
+- `e2e-runner` — Playwright / critical flows
+- `ui-ux-reviewer` — UI acceptance after implementation
+- `verifier` — skeptical second pass before accept
+- `shell` — git, docker, long command sequences
+- `ci-investigator` — failed PR check diagnosis
+
+## UI workflow
+
+`brainstorming` → `frontend-ui-ux` → `make-interfaces-feel-better` → `ui-ux-reviewer`
+
+## Do not skip
+
+- Domain skills for voice-bot, FastAPI, React, Docker
+- Review gate after implementation
+- Security review on sensitive surfaces

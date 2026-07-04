@@ -10,7 +10,7 @@ Built from the full-cycle stack documented in [d:\\docker\\docs\\full-cycle-agen
 | Component | Count | Install target |
 |-----------|-------|----------------|
 | Skills | 43 | `~/.cursor/skills/` |
-| Rules (`.mdc`) | 26 | `~/.cursor/rules/` |
+| Rules (`.mdc`) | 27 | `~/.cursor/rules/` |
 | Agents | 6 | `~/.cursor/agents/` |
 | Guard hooks | 3 | `~/.cursor/hooks/` + project `hooks.json` via bootstrap |
 | spec-kit templates | 25 files | project `.specify/` via bootstrap |
