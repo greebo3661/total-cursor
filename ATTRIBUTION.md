@@ -17,6 +17,7 @@ projects. See each upstream repository for license terms.
 | runbook-generator | borghei/Claude-Skills | https://github.com/borghei/Claude-Skills | engineering/runbook-generator |
 | generate-uat | custom | this repo | replacement for non-existent rushikeshpol02/ai-skills |
 | make-interfaces-feel-better | jakubkrehel/make-interfaces-feel-better | https://github.com/jakubkrehel/make-interfaces-feel-better | UI polish: typography, surfaces, animations, micro-interactions |
+| frontend-ui-ux | dnh33/frontend-ui-ux | https://github.com/dnh33/frontend-ui-ux | Webshop UI/UX: conversion optimization, anti-AI-slop aesthetics, accessibility |
 | voice-bot profile | custom | d:\\docker project | AGENTS.md, voice-bot-stack skill, voice-bot.mdc rule |
 
 ## MCP servers (configured via example, not bundled)

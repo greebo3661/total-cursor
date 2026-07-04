@@ -1,12 +1,12 @@
 {
   "name": "total-cursor",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Portable Cursor agent stack for user-scope installation across nodes",
   "builtFrom": "d:\\docker",
-  "builtAt": "2026-06-30",
+  "builtAt": "2026-07-04",
   "installScope": "user",
   "counts": {
-    "skills": 42,
+    "skills": 43,
     "rules": 26,
     "agents": 6,
     "hooks": 3,
@@ -24,7 +24,8 @@
     "medzin/sre-runbook-agent-skills",
     "borghei/Claude-Skills",
     "custom (generate-uat)",
-    "jakubkrehel/make-interfaces-feel-better"
+    "jakubkrehel/make-interfaces-feel-better",
+    "dnh33/frontend-ui-ux"
   ],
   "skills": [
     "api-design",
@@ -37,6 +38,7 @@
     "fastapi-patterns",
     "finishing-a-development-branch",
     "frontend-patterns",
+    "frontend-ui-ux",
     "generate-uat",
     "make-interfaces-feel-better",
     "playwright-e2e",
