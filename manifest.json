@@ -1,6 +1,6 @@
 {
   "name": "total-cursor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Portable Cursor agent stack for user-scope installation across nodes",
   "builtFrom": "d:\\docker",
   "builtAt": "2026-07-04",
